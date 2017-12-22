@@ -76,7 +76,7 @@
 
                     element.bind('dragstart', function (evt) {
                         store.hold(key, collection[scope.$index], collection, safe);
-                        if(angular.isDefined(event.originalEvent.dataTransfer)) {
+                        if(angular.isDefined(event.originalEvent)) {
                             event.originalEvent.dataTransfer('text/html', null); //FF/jQuery fix
                         }
                     });
